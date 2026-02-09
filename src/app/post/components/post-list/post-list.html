@@ -1,29 +1,33 @@
 <app-header [userHeader]=false></app-header>
-<app-loader *ngIf="loader"></app-loader>
+@if (loader) {
+  <app-loader></app-loader>
+}
 @if (!loader) {
-<div class="selectSection">
+  <div class="selectSection">
     <div class="selectDropdown">
-        <mat-form-field class="w-100" appearance="outline">
-            <mat-label>Select Owner Type</mat-label>
-            <mat-select [(ngModel)]="selectedOwner" name="owner" (selectionChange)="selectedOwnerName()"
-                [disabled]="userPresent">
-                <mat-option value="all">All</mat-option>
-                @for (owner of ownerList; track owner) {
-                <mat-option [value]="owner.id">{{owner.name}}</mat-option>
-                }
-            </mat-select>
-        </mat-form-field>
+      <mat-form-field class="w-100" appearance="outline">
+        <mat-label>Select Owner Type</mat-label>
+        <mat-select [(ngModel)]="selectedOwner" name="owner" (selectionChange)="selectedOwnerName()"
+          [disabled]="userPresent">
+          <mat-option value="all">All</mat-option>
+          @for (owner of ownerList; track owner) {
+            <mat-option [value]="owner.id">{{owner.name}}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
     </div>
     <div class="btnSection">
-        <button class="createBtn" (click)="create()">Create</button>
+      <button class="createBtn" (click)="create()">Create</button>
     </div>
-</div>
-<div class="subSec">
+  </div>
+  <div class="subSec">
     <span>Note: Please click on the title to view the comments</span>
-</div>
-<div class="postMain">
-    <div *ngFor="let post of postList">
+  </div>
+  <div class="postMain">
+    @for (post of postList; track post) {
+      <div>
         <app-post-card [post]="post" (emitChanges)="chooseEmitChanges($event)"></app-post-card>
-    </div>
-</div>
+      </div>
+    }
+  </div>
 }

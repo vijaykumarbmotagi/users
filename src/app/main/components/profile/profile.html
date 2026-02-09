@@ -1,28 +1,31 @@
 <app-header [userHeader]=true></app-header>
-<app-loader *ngIf="loader"></app-loader>
-<div *ngIf="!loader" class="main">
+@if (loader) {
+  <app-loader></app-loader>
+}
+@if (!loader) {
+  <div class="main">
     <div class="profileContact">
-        <div class="profileCard">
-            <div>
-                <div class="cardName"><span>Name: {{profileData.name}}</span></div>
-                <div class="pd-10 fs-25"><span>Email: {{profileData.email}}</span></div>
-                <div class="pd-10 fs-25"><span>Phone No: {{profileData.phone}}</span></div>
-                <div class="pd-10">
-                    <div class="pd-10 fs-25"><span>Address :</span></div>
-                    <div class="cardAdress">
-                        <div class="pd-5 fs-20"><span>Street: {{profileData.address?.street}}</span></div>
-                        <div class="pd-5 fs-20"><span>City: {{profileData.address?.city}}</span></div>
-                        <div class="pd-5 fs-20"><span>Zipcode: {{profileData.address?.zipcode}}</span></div>
-                    </div>
-                </div>
-                <div class="pd-10 fs-25"><span>Company: {{profileData.company?.name}}</span></div>
-                <div class="pd-5 fs-20"><span>Company description: {{profileData.company?.catchPhrase}}</span></div>
-
-                <div class="backBtn">
-                    <button class="btn" (click)="post()">Post</button>
-                    <button class="btn" (click)="back()">Back</button>
-                </div>
+      <div class="profileCard">
+        <div>
+          <div class="cardName"><span>Name: {{profileData.name}}</span></div>
+          <div class="pd-10 fs-25"><span>Email: {{profileData.email}}</span></div>
+          <div class="pd-10 fs-25"><span>Phone No: {{profileData.phone}}</span></div>
+          <div class="pd-10">
+            <div class="pd-10 fs-25"><span>Address :</span></div>
+            <div class="cardAdress">
+              <div class="pd-5 fs-20"><span>Street: {{profileData.address?.street}}</span></div>
+              <div class="pd-5 fs-20"><span>City: {{profileData.address?.city}}</span></div>
+              <div class="pd-5 fs-20"><span>Zipcode: {{profileData.address?.zipcode}}</span></div>
             </div>
+          </div>
+          <div class="pd-10 fs-25"><span>Company: {{profileData.company?.name}}</span></div>
+          <div class="pd-5 fs-20"><span>Company description: {{profileData.company?.catchPhrase}}</span></div>
+          <div class="backBtn">
+            <button class="btn" (click)="post()">Post</button>
+            <button class="btn" (click)="back()">Back</button>
+          </div>
         </div>
+      </div>
     </div>
-</div>
+  </div>
+}

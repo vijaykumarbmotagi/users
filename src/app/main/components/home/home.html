@@ -1,9 +1,14 @@
 <app-header [userHeader]=true></app-header>
-<app-loader *ngIf="loader"></app-loader>
+@if (loader) {
+  <app-loader></app-loader>
+}
 <div class="mainTxt"><span>Please click the below card for user's deatils</span></div>
-<div *ngIf="!loader" class="mainContact">
-
-    <div *ngFor="let user of userList">
+@if (!loader) {
+  <div class="mainContact">
+    @for (user of userList; track user) {
+      <div>
         <app-profile-card [user]="user" (click)="selectedCard(user)"></app-profile-card>
-    </div>
-</div>
+      </div>
+    }
+  </div>
+}

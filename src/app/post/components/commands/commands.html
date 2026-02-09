@@ -1,37 +1,39 @@
 <app-header [userHeader]=false></app-header>
-<app-loader *ngIf="loader"></app-loader>
+@if (loader) {
+  <app-loader></app-loader>
+}
 @if (!loader) {
-<div class="mainContent">
+  <div class="mainContent">
     <div class="cmtContent">
-        <div>
-            <div class="cmtTitle"><span>Comments...</span></div>
-            <div><hr /></div>
-            <div class="cmtSection">
-                @for (cmt of commentsList; track cmt) {
-                <div>
-                    <div class="nameSection">
-                        <div class="p5">
-                            <img class="userImg" src="assets/images/profile.png" alt="user img" />
-                        </div>
-                        <div class="p5">
-                            <div class="nameTxt">
-                                <span>{{cmt.name}}</span>
-                            </div>
-                            <div class="emailTxt">
-                                <span>{{cmt.email}}</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p5">
-                        <ul>
-                            <li><span>{{cmt.body}}</span></li>
-                        </ul>
-                    </div>
-                    <hr />
+      <div>
+        <div class="cmtTitle"><span>Comments...</span></div>
+        <div><hr /></div>
+        <div class="cmtSection">
+          @for (cmt of commentsList; track cmt) {
+            <div>
+              <div class="nameSection">
+                <div class="p5">
+                  <img class="userImg" src="assets/images/profile.png" alt="user img" />
                 </div>
-                }
+                <div class="p5">
+                  <div class="nameTxt">
+                    <span>{{cmt.name}}</span>
+                  </div>
+                  <div class="emailTxt">
+                    <span>{{cmt.email}}</span>
+                  </div>
+                </div>
+              </div>
+              <div class="p5">
+                <ul>
+                  <li><span>{{cmt.body}}</span></li>
+                </ul>
+              </div>
+              <hr />
             </div>
+          }
         </div>
+      </div>
     </div>
-</div>
+  </div>
 }
