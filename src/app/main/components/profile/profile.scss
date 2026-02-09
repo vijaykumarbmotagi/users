@@ -1,0 +1,47 @@
+.main {
+    height: 100vh;
+}
+
+.profileContact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem;
+}
+
+.profileCard {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    width: 700px;
+    margin: 1.8rem;
+    padding: 1rem;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+.cardName {
+    font-size: 40px;
+    font-weight: 600;
+    padding-bottom: 1rem;
+}
+
+.cardAdress {
+    padding-left: 2rem;
+}
+
+.backBtn {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem 0 0 0;
+    
+    button {
+        background-color: #2EC4B6;
+        color: #fff;
+        width: 100px;
+        height: 35px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 15px;
+    }
+}

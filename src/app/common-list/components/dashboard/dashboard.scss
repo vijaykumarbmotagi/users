@@ -1,0 +1,39 @@
+.dashboardMain {
+    background-color: #FFC52F;
+    min-height: 100vh;
+    color: #000000;
+    padding: 20px;
+}
+
+.dashboardContact {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 90vh;
+}
+
+.mainTxt {
+    margin-right: 5rem;
+    text-align: end;
+}
+
+.button-primary {
+  background-color: #1A1A1A;
+  color: #FFFFFF;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.button-primary:hover {
+  background-color: #333333;
+}
+
+.btnSection {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 30px 0;
+}

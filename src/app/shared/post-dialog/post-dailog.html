@@ -1,0 +1,26 @@
+<div>
+  <div class="titleSec">
+    <span>Post</span>
+  </div>
+</div>
+
+<mat-dialog-content>
+  <!-- <p>{{ data.ownerId }}</p> -->
+  <form [formGroup]="post">
+    <mat-form-field class="w-100" appearance="outline">
+      <mat-label>Title</mat-label>
+      <input matInput placeholder="" formControlName="title" value="">
+    </mat-form-field>
+
+    <mat-form-field class="w-100" appearance="outline">
+      <mat-label>Description</mat-label>
+      <textarea matInput formControlName="description" placeholder=""></textarea>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+
+
+<mat-dialog-actions>
+  <button matButton="filled" (click)="createOrUpdate()">{{itsNew ? "Create" : "Update"}}</button>
+  <button mat-button="outlined" (click)="close()">Close</button>
+</mat-dialog-actions>

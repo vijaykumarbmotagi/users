@@ -1,0 +1,20 @@
+<!-- <div class="headerMain">
+    <div class="headerContent">
+        <span class="title">Display the User's List from the PlaceHolder JSON API</span>
+    </div>
+</div> -->
+
+<div class="headerMain">
+    <div class="header1Contact">
+        <div class="flex25 logoTxt" (click)="dashBoard()">
+            <span class="logoDesign">VBM</span>
+        </div>
+        <div class="flex70 mainTxt">
+            <span *ngIf="userHeader" class="title">User's List</span>
+            <span *ngIf="!userHeader" class="title">Post List</span>
+        </div>
+        <div class="flex5 logoutSection" (click)="logout()">
+            <mat-icon class="logoutIcon" aria-label="Logout">exit_to_app</mat-icon>
+        </div>
+    </div>
+</div>

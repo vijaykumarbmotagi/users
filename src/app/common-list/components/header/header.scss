@@ -1,0 +1,63 @@
+.headerMain {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #1A2A6C;
+    color: #ffffff;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.headerContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.title {
+    font-size: 25px;
+    font-weight: 600;
+    font-family: cursive;
+}
+
+.header1Contact {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.mainTxt {
+    margin-left: 27%;
+}
+
+.logoTxt {
+    font-size: 25px;
+    padding: 0 0 0 1%;
+    font-weight: 400;
+    font-family: none;
+    font-style: italic;
+    cursor: pointer;
+}
+
+.logoDesign {
+    border: 1px solid #ffffff;
+    padding: 4%;
+    border-radius: 50%;
+}
+
+.logoutIcon {
+    font-size: 35px !important;
+    height: auto !important;
+    width: auto !important;
+}
+
+.logoutSection {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}

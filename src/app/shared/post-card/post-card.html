@@ -1,0 +1,15 @@
+<div class="postContact">
+    <div class="postTitle" title="View Comments" (click)="selectedPost(post.id)"><span>{{post.title}}</span></div>
+    <div class="">
+        <hr />
+    </div>
+    <div class="postDes">
+        <div>
+            <span>{{post.body}}</span>
+        </div>
+    </div>
+    <div class="iconSec">
+        <mat-icon class="editIcon" (click)="postEdit(post)">edit</mat-icon>
+        <mat-icon class="cancelIcon" (click)="postDelete(post.id)">cancel</mat-icon>
+    </div>
+</div>

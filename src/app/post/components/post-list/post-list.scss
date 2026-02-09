@@ -1,0 +1,28 @@
+.postMain {
+    display: flex;
+    flex-wrap: wrap;
+}
+.subSec {
+    padding: 0 2rem;
+}
+.selectSection {
+    display: flex;
+    justify-content: center;
+}
+.selectDropdown {
+    width: 30%;
+    padding-top: 15px;
+}
+.btnSection {
+    padding: 1.4rem 3rem;
+}
+
+.createBtn {
+    padding: 10px;
+    width: 150px;
+    font-size: 15px;
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: #1A2A6C;
+    cursor: pointer;
+}

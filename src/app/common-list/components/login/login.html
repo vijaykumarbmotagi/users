@@ -1,0 +1,26 @@
+<div class="main">
+    <div class="container-main">
+        <div class="login-main w-50">
+            <div class="login-container">
+                <h2>Login</h2>
+                <div>
+                    <form [formGroup]="login" (submit)="submitLogin()">
+                        <div class="flex">
+                            <input type="email" name="username" formControlName="username" placeholder="User Name" />
+                        </div>
+                        <div class="flex">
+                            <input type="password" name="password" formControlName="password" placeholder="Password" />
+                        </div>
+                        <button type="submit" [disabled]="login.invalid">Sign In</button>
+                        <a href="#" class="forgot-password">Forgot Password?</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="w-50">
+            <div>
+                <img src="assets/images/dashboard.png" alt="dashboard Image" />
+            </div>
+        </div>
+    </div>
+</div>
